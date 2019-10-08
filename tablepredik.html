@@ -93,8 +93,7 @@
 		<button id="helix">HELIX</button>
 		<button id="grid">GRID</button>
 	</div>
-	<a-scene embedded vr-mode-ui="enabled: false"
-		arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+	
 		<script type="module">
 
 			import * as THREE from './build/three.module.js';
@@ -236,7 +235,8 @@
 
 			function init() {
 
-
+                               <a-scene embedded vr-mode-ui="enabled: false"
+		arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
 				// table
 
 				for ( var i = 0; i < table.length; i += 5 ) {
