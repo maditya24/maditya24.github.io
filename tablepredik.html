@@ -93,7 +93,7 @@
 		<button id="helix">HELIX</button>
 		<button id="grid">GRID</button>
 	</div>
-	 <a-scene embedded vr-mode-ui="enabled: false"
+	<a-scene embedded vr-mode-ui="enabled: false"
 		arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
 		<script type="module">
 
@@ -236,7 +236,11 @@
 
 			function init() {
 
-                              
+				camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 3000;
+
+				scene = new THREE.Scene();
+
 				// table
 
 				for ( var i = 0; i < table.length; i += 5 ) {
