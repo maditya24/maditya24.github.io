@@ -84,7 +84,7 @@
 	</style>
 </head>
 
-<body style='margin : 0px; overflow: hidden;'>
+<body style='margin : auto; overflow: hidden;'>
 
 	<div id="container"></div>
 	<div id="menu">
@@ -93,14 +93,13 @@
 		<button id="helix">HELIX</button>
 		<button id="grid">GRID</button>
 	</div>
-
-
 	<a-scene embedded vr-mode-ui="enabled: false"
 		arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+		<a-marker type="barcode" value="6">
+			<a-entity position="-3.4 0 -2.65" rotation="-90 0 0">
+				<script type="module">
 
-		<script type="module">
-
-			import * as THREE from './build/three.module.js';
+					import * as THREE from './build/three.module.js';
 
 			import { TWEEN } from './jsm/libs/tween.module.min.js';
 			import { TrackballControls } from './jsm/controls/TrackballControls.js';
@@ -240,7 +239,7 @@
 			function init() {
 
 				camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
-				camera.position.z = 5000;
+				camera.position.z = 4000;
 
 				scene = new THREE.Scene();
 
@@ -448,6 +447,9 @@
 			}
 
 		</script>
+			</a-entity>
+		</a-marker>
+		<a-camera static />
 	</a-scene>
 </body>
 
