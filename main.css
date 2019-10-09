@@ -1,7 +1,7 @@
 body {
 	margin: 0;
+	background-color: #000;
 	color: #fff;
-	background-color: black;
 	font-family: Monospace;
 	font-size: 13px;
 	line-height: 24px;
@@ -55,4 +55,5 @@ select {
 	-ms-user-select: none;
 	user-select: none;
 	z-index: 2 !important;
+	/* TODO Solve this in HTML */
 }
