@@ -1,9 +1,5 @@
 body {
 	margin: 0;
-	background: url('./images/BI.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
 	color: #fff;
 	font-family: Monospace;
 	font-size: 13px;
