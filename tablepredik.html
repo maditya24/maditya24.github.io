@@ -96,12 +96,9 @@
 		<button id="grid">GRID</button>
 	</div>
 
-	<a-scene embedded vr-mode-ui="enabled: false"
-		arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+	<script type="module">
 
-		<script type="module">
-
-			import * as THREE from './build/three.module.js';
+		import * as THREE from './build/three.module.js';
 
 			import { TWEEN } from './jsm/libs/tween.module.min.js';
 			import { TrackballControls } from './jsm/controls/TrackballControls.js';
@@ -240,10 +237,10 @@
 
 			function init() {
 
-			//	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 : aspect );
-			//	camera.position.z = 3000;
+			camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 : aspect );
+			camera.position.z = 3000;
 
-			//	scene = new THREE.Scene();
+			scene = new THREE.Scene();
 		
 				// table
 
@@ -447,11 +444,9 @@
 				renderer.render( scene, camera );
 
 			}
-
-	
 		</script>
 
-	</a-scene>
+
 </body>
 
 </html>
