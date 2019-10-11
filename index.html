@@ -19,16 +19,14 @@
         </a-assets>
         <a-camera static />
 
-        <a-marker-camera type="pattern"
-            url="https://raw.githubusercontent.com/maditya24/maditya24.github.io/master/images/pattern-test.patt">
-        </a-marker-camera>
-        <a-entity position="-3.4 0 -2.65" rotation="-90 0 0">
-            <a-plane width="8" height="1" position='0 -2.75 -0' rotation="0 0 0" color="green"></a-plane>
-            <a-text value="Video 21 ITERA " color="black" position="0 -2.5 0.4" align="center" width="8"></a-text>
-            <a-video src="#adit" width="8" height="4.5" position="0 0 0">
-            </a-video>
-        </a-entity>
-
+        <a-marker type="pattern" url="./images/pattern-test.patt">
+            <a-entity position="-3.4 0 -2.65" rotation="-90 0 0">
+                <a-plane width="8" height="1" position='0 -2.75 -0' rotation="0 0 0" color="green"></a-plane>
+                <a-text value="Video 21 ITERA " color="black" position="0 -2.5 0.4" align="center" width="8"></a-text>
+                <a-video src="#adit" width="8" height="4.5" position="0 0 0">
+                </a-video>
+            </a-entity>
+        </a-marker>
 
 
     </a-scene>
