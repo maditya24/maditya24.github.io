@@ -9,17 +9,21 @@
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
 </head>
 
+<a-assets>
+    <a-asset-item id="crate-obj" src="./images/Gltf/Husky/source/model.obj"></a-asset-item>
+    <a-asset-item id="crate-mtl" src="./images/Gltf/Husky/source/model.mtl"></a-asset-item>
+</a-assets>
+
+
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded vr-mode-ui="enabled: false"
         arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
         <a-camera static />
 
         <a-marker type="pattern" url="./images/pattern-test.patt">
-            <a-sphere
-                src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
-                radius="1" segments-height="53" position="0 0.5 0"
-                animation="property: rotation; to: 0 360 0; repeat: Indefinite; easing: linear; dur: 50000">
-            </a-sphere position="5 0 0">
+
+            <a-obj-model src="#crate-obj" mtl="#crate-mtl" scale="0.03 0.03 0.03"></a-obj-model>
+
         </a-marker>
     </a-scene>
 </body>
