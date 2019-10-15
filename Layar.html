@@ -321,12 +321,7 @@
                       canvas so element bounding for preserve-3d has not yet been implemented. If the rendering is fixed
                       as
                       some point I may go back and get it working as well.</li>
-                    <li>"a-" tags do not render correctly as XHTML embeded into SVG, so any parent "a-" elements of the
-                      embed html will be converted to div tags for rendering. This may mean your css will require
-                      modification.</li>
-                    <li>Elements that require rendering outside of the DOM such as the iframe and canvas element will
-                      not
-                      work.
+
                     <li>:before and :after pseudo elements can't be accessed via the DOM so they can't be used in the
                       element to determine the object bounds. As such, use them with caution. </li>
                     <li>Form elements are not consistently rendered to the canvas element so some basic default styles
