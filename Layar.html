@@ -14,6 +14,7 @@
   <style>
     p {
       text-align: center;
+      font-size: 20px;
     }
 
     body {
@@ -217,10 +218,10 @@
                 <h2>Menu</h2>
                 <ul>
                   <li><a href="#" class="button">Home</a></li>
-                  <li><a href="#slide2" class="button">Peminjaman Buku</a></li>
-                  <li><a href="#slide3" class="button">Baca E-book dan E-Jurnal</a></li>
+                  <li><a href="#slide2" class="button">Sirkulasi</a></li>
+                  <li><a href="#slide3" class="button">Informasi</a></li>
                   <li><a href="#slide4" class="button">Bebas Pustaka</a></li>
-                  <li><a href="#slide5" class="button">About</a></li>
+                  <li><a href="#slide5" class="button">Tentang</a></li>
                 </ul>
               </a-entity>
 
@@ -236,7 +237,7 @@
 
                 <div id="page2">
                   <h1>Peminjaman Buku</h1>
-                  <p><img src="./images/Pinjam.jpeg" width="1000" height="720">
+                  <p><img src="./images/Pinjam.jpeg" width="800" height="730">
                   </p>
 
 
@@ -269,7 +270,7 @@
                 </div>
 
                 <div id="page3">
-                  <h1>Interactivity</h1>
+                  <h1>Informasi</h1>
                   <p>You can add javascript interactivity in the standard way either by events on the elements
                     themselves
                     or
@@ -293,60 +294,42 @@
                 </div>
 
                 <div id="page4">
-                  <h1>Limitations</h1>
-                  <ul>
-                    <li>All styles and images must be in the same origin or allow access via CORS; this allows the
-                      component
-                      to embed all of the assets required to render the html properly to the canvas via the
-                      foreignObject
-                      element. </li>
-                    <li>transform-style css is limited to flat. This is mainly due to it not being rendered properly
-                      to
-                      canvas so element bounding for preserve-3d has not yet been implemented. If the rendering is
-                      fixed
-                      as
-                      some point I may go back and get it working as well.</li>
-                    <li>"a-" tags do not render correctly as XHTML embeded into SVG, so any parent "a-" elements of
-                      the
-                      embed html will be converted to div tags for rendering. This may mean your css will require
-                      modification.</li>
-                    <li>Elements that require rendering outside of the DOM such as the iframe and canvas element will
-                      not
-                      work.
-                    <li>:before and :after pseudo elements can't be accessed via the DOM so they can't be used in the
-                      element to determine the object bounds. As such, use them with caution. </li>
-                    <li>Form elements are not consistently rendered to the canvas element so some basic default styles
-                      are
-                      included for consistency.</li>
-                    <li>Currently there is no support for css transitions.</li>
-                  </ul>
+                  <h1>Bebas Pustaka</h1>
+                  <div class="code">
+                    1. Menyerahkan Skripsi yang sudah ditandatangani dan diberi stempel.
+
+                    2. Menyerahkan soft-file Skripsi ke email perpustakaan@itera.ac.id
+
+                    3. Menyerahkan buku hibah dengan ketentuan:
+
+                    * Buku bekas berjumlah 2 buah; 1 buku perkuliahan, dan 1 buku bebas
+                    * Buku Baru berjumlah 1 buah; buku perkuliahan / buku bebas
+
+                    4. Tidak terdapat denda buku dan tidak sedang melakukan peminjaman buku.
+                  </div>
                   <a href="#slide3" class="button prev">Prev Page</a>
                   <a href="#slide5" class="button next">Next Page</a>
                 </div>
 
                 <div id="page5">
-                  <h1>coba adit</h1>
-                  <ul>
-                    <li>All styles and images must be in the same origin or allow access via CORS; this allows the
-                      component
-                      to embed all of the assets required to render the html properly to the canvas via the
-                      foreignObject
-                      element. </li>
-                    <li>transform-style css is limited to flat. This is mainly due to it not being rendered properly
-                      to
-                      canvas so element bounding for preserve-3d has not yet been implemented. If the rendering is
-                      fixed
-                      as
-                      some point I may go back and get it working as well.</li>
+                  <h1>Tentang</h1>
+                  <p>Terima kasih telah mengakses Augmented Reality UPT Perpustakaan.</p>
+                  <div class="code">
+                    Profile Pembuat
 
-                    <li>:before and :after pseudo elements can't be accessed via the DOM so they can't be used in the
-                      element to determine the object bounds. As such, use them with caution. </li>
-                    <li>Form elements are not consistently rendered to the canvas element so some basic default styles
-                      are
-                      included for consistency.</li>
-                    <li>Currently there is no support for css transitions.</li>
-                  </ul>
+                    Nama : M. Aditya Pratama, S.Kom
+                    Tempat dan Tanggal Lahir : Tanjung Karang, 24 Agustus 1992
+                    Tlpn/Wa : 0899 121 5911
+                    Pendidikan :
+
+                    1. SMP N 24 Bandar Lampung
+                    2. SMA N 6 Bandar Lampung
+                    3. S1 : Sistem Informasi STMIK Teknokrat (Universitas Teknokrat Indonesia)
+                    4. S2 : Teknik Informatika IBI Darjamaya (On Progress)
+                  </div>
+
                   <a href="#slide4" class="button prev">Prev Page</a>
+
                 </div>
 
               </a-entity>
@@ -355,17 +338,17 @@
               <a-entity id="menu" class="screen menu dark" htmlembed="ppu:256" position="2.712 2 -6.476"
                 rotation="0 -45 0">
                 <h2>Links</h2>
-                <a class="imgLink" href="https://aframe.io/"><img src="assets/itera.png" width="80" height="80">
-                  <div>AR Ruang Perpus</div>
                 </a>
                 <a class="imgLink" href="https://perpustakaan.itera.ac.id/"><img src="assets/perpus2.png" width="128"
                     height="128">
                   <div>Web Perpus</div>
                 </a>
-                <a class="imgLink" href="https://perpustakaan.itera.ac.id/e-resource/"><img src="assets/res.png"
-                    width="80" height="80">
-                  <div>E-Resource</div>
-                </a>
+                <a class="imgLink" href="https://aframe.io/"><img src="assets/itera.png" width="80" height="80">
+                  <div>Poral AR</div>
+                  <a class="imgLink" href="https://perpustakaan.itera.ac.id/e-resource/"><img src="assets/res.png"
+                      width="80" height="80">
+                    <div>E-Resource</div>
+                  </a>
               </a-entity>
               <!-- Menu Kanan -->
 
