@@ -7,6 +7,7 @@
     <title>adit test</title>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -19,7 +20,7 @@
             <a-entity position="-3.4 0 -2.65" rotation="-90 0 0">
                 <a-plane width="8" height="1" position='0 -2.75 -0' rotation="0 0 0" color="green"></a-plane>
                 <a-text value="Video 21 ITERA " color="black" position="0 -2.5 0.4" align="center" width="8"></a-text>
-                <a-video src="./videos/test.mp4" width="8" height="4.5" position="0 0 0">
+                <a-video src="./videos/test.mp4" width="8" height="4.5" position="0 0 0" playsinline>
                 </a-video>
             </a-entity>
         </a-marker>
