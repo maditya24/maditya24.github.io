@@ -5,7 +5,9 @@
 	<title>three.js css3d - periodic table</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<link type="text/css" rel="stylesheet" href="main.css">
+	<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+	<script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+	<link type="text/css" rel="stylesheet" href="./css/periodik.css">
 	<style>
 		a {
 			color: #8ff;
@@ -82,19 +84,21 @@
 	</style>
 </head>
 
-<body>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded vr-mode-ui="enabled: false"
+		arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+		<a-camera static />
+		<div id="container"></div>
+		<div id="menu">
+			<button id="table">TABLE</button>
+			<button id="sphere">SPHERE</button>
+			<button id="helix">HELIX</button>
+			<button id="grid">GRID</button>
+		</div>
 
-	<div id="container"></div>
-	<div id="menu">
-		<button id="table">TABLE</button>
-		<button id="sphere">SPHERE</button>
-		<button id="helix">HELIX</button>
-		<button id="grid">GRID</button>
-	</div>
+		<script type="module">
 
-	<script type="module">
-
-		import * as THREE from '../build/three.module.js';
+			import * as THREE from '../build/three.module.js';
 
 			import { TWEEN } from './jsm/libs/tween.module.min.js';
 			import { TrackballControls } from './jsm/controls/TrackballControls.js';
@@ -441,6 +445,7 @@
 			}
 
 		</script>
+	</a-scene>
 </body>
 
 </html>
