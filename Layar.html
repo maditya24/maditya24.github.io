@@ -8,6 +8,7 @@
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
   <script src="./build/build.js"></script>
+  <script src="https://unpkg.com/aframe-extras.animation-mixer@3.4.0/dist/aframe-extras.animation-mixer.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
   <!-- taro di css aja baik nya-->
@@ -197,7 +198,8 @@
         <div id="slide5" class="slide">
 
           <a-scene embedded vr-mode-ui="enabled: false"
-            arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+            arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
+            gltf-model="dracoDecoderPath: ./js/libs/draco/;">
 
 
             <a-assets>
@@ -210,8 +212,11 @@
 
               <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .screen"></a-entity>
               <a-entity laser-controls raycaster="objects: .screen;"></a-entity>
-
-
+              <!-- animasi robot-->
+              <a-entity gltf-model="url(./images/Gltf/robot/scene.gltf)" rotation="0 45 0" scale="0.027 0.027 0.027"
+                position="-2.712 0.45 -6.476" animation-mixer>
+              </a-entity>
+              <!-- animasi robot-->
               <a-entity id="menu" class="screen menu dark" htmlembed="ppu:256" position="-2.712 2 -6.476"
                 rotation="0 45 0">
                 <h2>Menu</h2>
