@@ -82,20 +82,20 @@
     a.imgLink {
       width: 100%;
       border-radius: 20px;
-      color: #fff;
+      color: #000000;
       text-decoration: none;
       text-align: center;
       padding: 10px 0;
       margin-bottom: 20px;
-      background-color: #444;
-      border: 3px solid #444;
+      background-color: #FFFFFF;
+      border: 3px solid #FFFFFF;
       text-shadow: none;
       display: block;
     }
 
     a.imgLink:hover {
-      border: 3px solid #fff;
-      background-color: #444;
+      border: 5px solid #00BFFF;
+      background-color: #fff;
     }
 
     .code {
@@ -212,12 +212,18 @@
 
               <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .screen"></a-entity>
               <a-entity laser-controls raycaster="objects: .screen;"></a-entity>
+
               <!-- animasi robot-->
               <a-entity gltf-model="url(./images/Gltf/robot/scene.gltf)" rotation="0 45 0" scale="0.027 0.027 0.027"
-                position="-2.712 0.45 -6.476" animation-mixer>
+                position="-2.712 0.45 -5.476" animation-mixer>
+              </a-entity>
+
+              <a-entity gltf-model="url(./images/Gltf/orb/scene.gltf)" scale="0.04 0.04 0.04" position="0 3.5 -6"
+                animation-mixer>
               </a-entity>
               <!-- animasi robot-->
-              <a-entity id="menu" class="screen menu dark" htmlembed="ppu:256" position="-2.712 2 -6.476"
+
+              <a-entity id="menu" class="screen menu dark" htmlembed="ppu:256" position="-2.712 2 -5.476"
                 rotation="0 45 0">
                 <h2>Menu</h2>
                 <ul>
@@ -229,7 +235,7 @@
                 </ul>
               </a-entity>
 
-              <a-entity id="main" class="screen dark main" htmlembed="ppu:256" position="0 2 -7">
+              <a-entity id="main" class="screen dark main" htmlembed="ppu:256" position="0 2 -6">
                 <div id="page1">
                   <h1>Home</h1>
                   <p>Selamat Datang di Augmented Reality Perpustakaan ITERA.
@@ -319,9 +325,12 @@
                 </div>
 
               </a-entity>
+              <!-- Menu utama -->
+
+
 
               <!-- Menu Kanan -->
-              <a-entity id="menu" class="screen menu dark" htmlembed="ppu:256" position="2.712 2 -6.476"
+              <a-entity id="menu" class="screen menu dark" htmlembed="ppu:256" position="2.712 2 -5.476"
                 rotation="0 -45 0">
                 <h2>Links</h2>
                 </a>
