@@ -7,7 +7,7 @@
     <title>adit test</title>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
-    <script src="https://unpkg.com/aframe-extras.animation-mixer@3.4.0/dist/aframe-extras.animation-mixer.js"></script>
+
 </head>
 <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
 
@@ -16,7 +16,6 @@
     <a-scene embedded vr-mode-ui="enabled: false"
         arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
         gltf-model="dracoDecoderPath: ./js/libs/draco/;">
-        <a-camera static />
 
         <a-marker type="pattern" url="./images/pattern-test.patt">
             <a-entity gltf-model="url(./images/Gltf/ganesa/scene.gltf)" rotation="-90 0 0 " scale="0.1 0.1 0.1"
@@ -25,6 +24,7 @@
 
 
         </a-marker>
+        <a-camera static />
     </a-scene>
 </body>
 

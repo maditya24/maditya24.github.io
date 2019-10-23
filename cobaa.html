@@ -9,7 +9,7 @@
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
     <script src="https://unpkg.com/aframe-extras.animation-mixer@3.4.0/dist/aframe-extras.animation-mixer.js"></script>
 </head>
-<link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+
 
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -19,11 +19,11 @@
         <a-camera static />
 
         <a-marker type="pattern" url="./images/pattern-test.patt">
-            <a-entity gltf-model="url(./images/Gltf/card/scene.gltf)" rotation="-90 0 0 " scale="0.007 0.007 0.007"
-                position="0 0 0" animation-mixer>
+            <a-entity camera look-controls>
+                <a-entity gltf-model="url(./images/Gltf/h/scene.gltf)" rotation="260 0 0" scale="0.0008 0.0008 0.0008"
+                    position="0 0 2" animation-mixer>
+                </a-entity>
             </a-entity>
-
-
         </a-marker>
     </a-scene>
 </body>
