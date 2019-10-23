@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>adit test</title>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-extras.animation-mixer@3.4.0/dist/aframe-extras.animation-mixer.js"></script>
+</head>
+
+
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded vr-mode-ui="enabled: false"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
+        gltf-model="dracoDecoderPath: ./js/libs/draco/;">
+        <a-camera static />
+
+        <a-marker type="pattern" url="./images/pattern-test.patt">
+
+            <a-entity gltf-model="url(./images/Gltf/kratos/scene.gltf)" rotation="-90 0 0" position="0 0.8 0"
+                scale="0.01 0.01 0.01" animation-mixer>
+            </a-entity>
+
+        </a-marker>
+    </a-scene>
+</body>
+
+</html>
