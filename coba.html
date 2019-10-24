@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Perpustakaan ITERA AR 1.1 Beta</title>
+
+    <!-- ambil data-->
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"> </script>
+    <script src="https://meizano.github.io/AR/aframe/library/aframe-ar.min.js"> </script>
+    <!-- ambil data-->
+</head>
+
+<body style='margin : 0 ; overflow: hidden;'>
+    <a-scene embedded vr-mode-ui="disabled"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+        <!-- buat sekenario-->
+
+        <!-- variabel yang bisa di pake taro disini-->
+        <a-assets>
+            <img id="bvs" src="https://perpustakaan.itera.ac.id/wp-content/uploads/2019/03/masykur-e1553852755503.jpg">
+        </a-assets>
+        <!-- variabel yang bisa di pake taro disini-->
+
+        <a-marker type="barcode" value="6">
+            <!-- Marker tipe barcode, gunakan gambar 6-->
+            <a-entity id="rig" movement-controls position="0 0 0" rotation="-90 0 0">
+                <a-entity id="camera" camera position="0 1.6 0" look-controls="pointerLockEnabled: true"></a-entity>
+            </a-entity>
+            <!-- posisi realitas 90 derajat-->
+            <a-plane width="4" height="4" position='0 0 -0.1' rotation="0 0 0" color="pink">
+                <!-- kotak-->
+                <a-text value="Orang Terjelek di dunia" color="green" position="0 3.5 0.2" align="center"> </a-text>
+                <!-- Judul-->
+                <a-image src="#bvs" width="4" height="3" position="0 1.5 0.2"></a-image> <!-- Load Gambar-->
+                <a-text position="-1.9 -1.5 0.2" width="3.8" height="4.5" value="Masykur adalah manusia terjelek di dunia. jomblo akut satu ini sangat tidak tertolong. 
+                       bagi siapa saja yang mau dengan dia akan diberi hadiah langsung dari orang tua nya. 
+                       sekian dan terimakasih." color="black"></a-text>
+            </a-plane> <!-- Tulisan-->
+            </a-entity> <!-- akhiri Realitas-->
+        </a-marker> <!-- akhiri marker-->
+    </a-scene> <!-- akhiri sekenario-->
+
+</body>
+
+</html>

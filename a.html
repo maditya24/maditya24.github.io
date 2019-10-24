@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+    <a-scene embedded vr-mode-ui="enabled: false"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
+        gltf-model="dracoDecoderPath: ./js/libs/draco/;">
+        <a-camera static />
+
+
+
+        <a-marker type="pattern" url="./pattern/adit.patt">
+
+            <a-plane width="2" height="" rotation="-90 0 0" position="0 1 1"></a-plane>
+            <a-text value="saya mau belajar" rotation="-90 0 0" align="center" position="0 1.1 1" color="black">
+            </a-text>>
+
+        </a-marker>
+    </a-scene>
+
+
+
+    </a-scene>
+</body>
+
+</html>
