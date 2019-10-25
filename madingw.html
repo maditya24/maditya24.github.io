@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>adit test</title>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+    <a-scene embedded vr-mode-ui="enabled: false"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+        <a-camera static />
+
+
+
+        <a-marker type="pattern" url="https://maditya24.github.io/images/pattern-test.patt">
+
+            <a-plane width="6.5" height="4.27" rotation="-90 0 0" position="0 1 1"></a-plane>
+            <a-text value="Mading Perpustakaan ITERA" rotation="-90 0 0" align="center" position="0 1.1 -1.3"
+                color="black">
+            </a-text>
+            <a-image src="https://maditya24.github.io/images/mading/UPT.png" rotation="-90 0 0" width="2" height="2"
+                position="-2.1 1.3 -0.1">
+            </a-image>
+            <a-image src="https://maditya24.github.io/images/mading/Layanan.png" rotation="-90 0 0" width="2" height="2"
+                position="0 1.1 -0.1">
+            </a-image>
+            <a-image src="https://maditya24.github.io/images/mading/Sirkulasi.png" rotation="-90 0 0" width="2"
+                height="2" position="2.1 1.3 -0.1">
+            </a-image>
+
+            <a-image src="https://maditya24.github.io/images/mading/Ref.png" rotation="-90 0 0" width="2" height="2"
+                position="-2.1 1.1 2">
+            </a-image>
+            <a-image src="https://maditya24.github.io/images/mading/Tanya.png" rotation="-90 0 0" width="2" height="2"
+                position="0 1.3 2">
+            </a-image>
+            <a-image src="https://maditya24.github.io/images/mading/UTS.png" rotation="-90 0 0" width="2" height="2"
+                position="2.1 1.1 2">
+            </a-image>
+        </a-marker>
+    </a-scene>
+
+</body>
+
+</html>
