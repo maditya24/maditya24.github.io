@@ -21,10 +21,12 @@
         arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
         gltf-model="dracoDecoderPath: ./js/libs/draco/;">
 
+        <a-camera static />
+
 
         <a-marker type="pattern" url="./images/pattern-test.patt">
             <a-entity gltf-model="url(./images/Gltf/mona/scene.gltf)" rotation="-90 0 0 " scale="0.04 0.04 0.04"
-                position="0 0 2" animation-mixer>
+                position="0 0 2" animation-mixer pinch-scale>
             </a-entity>
 
 
