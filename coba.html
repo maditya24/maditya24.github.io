@@ -2,46 +2,33 @@
 <html lang="id">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Perpustakaan ITERA AR 1.1 Beta</title>
+    <title>adit test</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-extras.animation-mixer@3.4.0/dist/aframe-extras.animation-mixer.js"></script>
 
-    <!-- ambil data-->
-    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"> </script>
-    <script src="https://meizano.github.io/AR/aframe/library/aframe-ar.min.js"> </script>
-    <!-- ambil data-->
 </head>
+<link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
 
-<body style='margin : 0 ; overflow: hidden;'>
-    <a-scene embedded vr-mode-ui="disabled"
-        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
-        <!-- buat sekenario-->
 
-        <!-- variabel yang bisa di pake taro disini-->
-        <a-assets>
-            <img id="bvs" src="https://perpustakaan.itera.ac.id/wp-content/uploads/2019/03/masykur-e1553852755503.jpg">
-        </a-assets>
-        <!-- variabel yang bisa di pake taro disini-->
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded vr-mode-ui="enabled: false"
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
+        gltf-model="dracoDecoderPath: ./js/libs/draco/;">
 
-        <a-marker type="barcode" value="6">
-            <!-- Marker tipe barcode, gunakan gambar 6-->
-            <a-entity id="rig" movement-controls position="0 0 0" rotation="-90 0 0">
-                <a-entity id="camera" camera position="0 1.6 0" look-controls="pointerLockEnabled: true"></a-entity>
+        <a-camera static />
+
+
+        <a-marker type="pattern" url="https://maditya24.github.io/images/pattern/pattern-mading.patt">
+            <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/mona/scene.gltf)" rotation="-90 0 0 "
+                scale="0.04 0.04 0.04" position="0 0 2">
             </a-entity>
-            <!-- posisi realitas 90 derajat-->
-            <a-plane width="4" height="4" position='0 0 -0.1' rotation="0 0 0" color="pink">
-                <!-- kotak-->
-                <a-text value="Orang Terjelek di dunia" color="green" position="0 3.5 0.2" align="center"> </a-text>
-                <!-- Judul-->
-                <a-image src="#bvs" width="4" height="3" position="0 1.5 0.2"></a-image> <!-- Load Gambar-->
-                <a-text position="-1.9 -1.5 0.2" width="3.8" height="4.5" value="Masykur adalah manusia terjelek di dunia. jomblo akut satu ini sangat tidak tertolong. 
-                       bagi siapa saja yang mau dengan dia akan diberi hadiah langsung dari orang tua nya. 
-                       sekian dan terimakasih." color="black"></a-text>
-            </a-plane> <!-- Tulisan-->
-            </a-entity> <!-- akhiri Realitas-->
-        </a-marker> <!-- akhiri marker-->
-    </a-scene> <!-- akhiri sekenario-->
 
+
+        </a-marker>
+    </a-scene>
 </body>
 
 </html>
