@@ -13,37 +13,49 @@
 
 <body>
     <a-scene embedded vr-mode-ui="enabled: false"
-        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;" gesture-detector>
+        arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
+        gltf-model="dracoDecoderPath: https://maditya24.github.io/js/libs/draco/;" gesture-detector>
         <a-camera static />
 
 
-        <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-a.patt">
-            <a-entity pinch-scale>
-                <a-plane width="6.5" height="4.27" rotation="-90 0 0" position="0 1 1"></a-plane>
-                <a-text value="Mading Perpustakaan ITERA" rotation="-90 0 0" align="center" position="0 1.1 -1.3"
-                    color="black">
-                </a-text>
-                <a-image src="https://maditya24.github.io/images/mading/UPT.png" rotation="-90 0 0" width="2" height="2"
-                    position="-2.1 1.3 -0.1">
-                </a-image>
-                <a-image src="https://maditya24.github.io/images/mading/Layanan.png" rotation="-90 0 0" width="2"
-                    height="2" position="0 1.1 -0.1">
-                </a-image>
-                <a-image src="https://maditya24.github.io/images/mading/Sirkulasi.png" rotation="-90 0 0" width="2"
-                    height="2" position="2.1 1.3 -0.1">
-                </a-image>
+        <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-I.patt">
+            <a-image src="https://maditya24.github.io/images/mading/Layanan.png" rotation="-90 0 0" width="2" height="2"
+                pinch-scale>
+            </a-image>
+        </a-marker>
 
-                <a-image src="https://maditya24.github.io/images/mading/Ref.png" rotation="-90 0 0" width="2" height="2"
-                    position="-2.1 1.1 2">
-                </a-image>
-                <a-image src="https://maditya24.github.io/images/mading/Tanya.png" rotation="-90 0 0" width="2"
-                    height="2" position="0 1.3 2">
-                </a-image>
-                <a-image src="https://maditya24.github.io/images/mading/UTS.png" rotation="-90 0 0" width="2" height="2"
-                    position="2.1 1.1 2">
-                </a-image>
+        <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-t.patt">
+            <a-image src="https://maditya24.github.io/images/mading/Tanya.png" rotation="-90 0 0" width="2" height="2"
+                pinch-scale>
+            </a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-e.patt">
+            <a-image src="https://maditya24.github.io/images/mading/Sirkulasi.png" rotation="-90 0 0" width="2"
+                height="2" pinch-scale>
+            </a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-r.patt">
+            <a-image src="https://maditya24.github.io/images/mading/Ref.png" rotation="-90 0 0" width="2" height="2"
+                pinch-scale>
+            </a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-a.patt">
+            <a-image src="https://maditya24.github.io/images/mading/UPT.png" rotation="-90 0 0" width="2" height="2"
+                pinch-scale>
+            </a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-gajah.patt">
+            <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/indonesia/scene.gltf)" rotation="0 0 0"
+                scale="0.1 0.1 0.1" pinch-scale>
             </a-entity>
         </a-marker>
+
+
+
     </a-scene>
 
 </body>
