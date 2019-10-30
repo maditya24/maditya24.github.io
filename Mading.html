@@ -7,6 +7,7 @@
     <title>adit test</title>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+
     <script src="https://maditya24.github.io/build/bacagerak.js"></script>
     <script src="https://maditya24.github.io/build/skala.js"></script>
 </head>
@@ -42,9 +43,11 @@
         </a-marker>
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-a.patt">
-            <a-image src="https://maditya24.github.io/images/mading/UPT.png" rotation="-90 0 0" width="2" height="2"
-                pinch-scale>
-            </a-image>
+            <a-sphere
+                src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
+                radius="1" segments-height="53" position="0 0.5 0"
+                animation="property: rotation; to: 0 360 0; repeat: true; dur: 30000">
+            </a-sphere position="5 0 0">
         </a-marker>
 
 
