@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <title>adit test</title>
+    <title>Mading Perpustakaan ITERA</title>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
 
@@ -16,8 +16,8 @@
     <script src="https://maditya24.github.io/build/skala.js"></script>
 
     <!--script portal -->
-    <script src='./build/portal/aframe-portal-door.js'></script>
-    <script src='./build/portal/threex-portal-door.js'></script>
+    <script src='https://maditya24.github.io/build/portal/aframe-portal-door.js'></script>
+    <script src='https://maditya24.github.io/build/portal/threex-portal-door.js'></script>
 
 
 </head>
@@ -94,9 +94,9 @@
         </a-marker>
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-b.patt">
-            <a-image src="https://maditya24.github.io/images/bijak.jpg" rotation="-90 0 0" width="3" height="2"
-                pinch-scale>
-            </a-image>
+            <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/nitendo/model.gltf)" rotation="-90 0 0"
+                position="0 0.8 0" scale="0.01 0.01 0.01" animation-mixer pinch-scale>
+            </a-entity>
         </a-marker>
 
         <a-marker type="barcode" value="0">
@@ -106,9 +106,9 @@
         </a-marker>
 
         <a-marker type="barcode" value="1">
-            <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/chees/scene.gltf)" rotation="-90 0 0"
-                position="0 0 2" scale="0.007 0.007 0.007" animation-mixer pinch-scale>
-            </a-entity>
+            <a-image src="https://maditya24.github.io/images/bijak.jpg" rotation="-90 0 0" width="3" height="2"
+                pinch-scale>
+            </a-image>
         </a-marker>
 
         <a-marker type="barcode" value="2">
