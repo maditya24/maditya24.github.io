@@ -6,17 +6,36 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>adit test</title>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+
+    <!-- script menjalankan animasi -->
     <script src="https://maditya24.github.io/build/animation-mixer.js"></script>
+
+    <!-- script baca sentuhan layar -->
     <script src="https://maditya24.github.io/build/bacagerak.js"></script>
     <script src="https://maditya24.github.io/build/skala.js"></script>
+
+    <!--script portal -->
+    <script src='./build/portal/aframe-portal-door.js'></script>
+    <script src='./build/portal/threex-portal-door.js'></script>
+
+
 </head>
+
+
 
 <body>
     <a-scene embedded vr-mode-ui="enabled: false"
         arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;"
-        gltf-model="dracoDecoderPath: https://maditya24.github.io/js/libs/draco/;" gesture-detector>
+        gltf-model="dracoDecoderPath: https://maditya24.github.io/js/libs/draco/;" antialias="true" gesture-detector>
         <a-camera static />
+
+
+        <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+            Pastikan Google Chrome atau Safari adalah versi terbaru <br><a href='https://perpustakaan.itera.ac.id'
+                target='_blank'>UPT Perpustakaan ITERA</a>
+        </div>
+
 
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-I.patt">
@@ -27,7 +46,7 @@
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-t.patt">
             <a-image src="https://maditya24.github.io/images/mading/Tanya.png" rotation="-90 0 0" width="2" height="2"
-                pinch-scale>
+                pinch-scale href="https://perpustakaan.itera.ac.id">
             </a-image>
         </a-marker>
 
@@ -44,9 +63,8 @@
         </a-marker>
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-a.patt">
-            <a-image src="https://maditya24.github.io/images/mading/UPT.png" rotation="-90 0 0" width="2" height="2"
-                pinch-scale>
-            </a-image>
+            <a-portal-door url='images/360_topaz.png' position='0 0 4' scale='6 3 6' rotation='-90 0 0'>
+                <a-portal-door>
         </a-marker>
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-gajah.patt">
@@ -57,10 +75,9 @@
 
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-bumi.patt">
-            <a-sphere
-                src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
-                radius="1" segments-height="53" position="0 0.5 0"
-                animation="property: rotation; to: 0 360 0; repeat: true; dur: 10000" pinch-scale>
+            <a-sphere src="https://maditya24.github.io/images/bumi.jpg" radius="1" segments-height="53"
+                position="0 0.5 0" animation="property: rotation; to: 0 360 0; loop: true; repeat: true; dur: 10000"
+                pinch-scale>
             </a-sphere position="5 0 0">
         </a-marker>
 
@@ -77,7 +94,7 @@
         </a-marker>
 
         <a-marker type="pattern" url="https://maditya24.github.io/pattern/adit/pattern-b.patt">
-            <a-image src="https://maditya24.github.io/images/bijak.jpg" rotation="-90 0 0" width="2" height="2"
+            <a-image src="https://maditya24.github.io/images/bijak.jpg" rotation="-90 0 0" width="3" height="2"
                 pinch-scale>
             </a-image>
         </a-marker>
@@ -96,19 +113,19 @@
 
         <a-marker type="barcode" value="2">
             <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/castle/scene.gltf)" rotation="-90 0 0"
-                position="0 0 0" animation-mixer pinch-scale>
+                position="0 1.7 0" scale="0.09 0.09 0.09" animation-mixer pinch-scale>
             </a-entity>
         </a-marker>
 
         <a-marker type="barcode" value="3">
             <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/water/model.gltf)" rotation="-90 0 0 "
-                scale="0.3 0.3 0.3" position="0 0 3" animation-mixer pinch-scale>
+                scale="0.7 0.7 0.7" position="0 0 0" animation-mixer pinch-scale>
             </a-entity>
         </a-marker>
 
         <a-marker type="barcode" value="4">
-            <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/aqua/model.gltf)" rotation="260 0 0"
-                scale="0.05 0.05 0.05" position="0 1 0.5" animation-mixer pinch-scale>
+            <a-entity gltf-model="url(https://maditya24.github.io/images/Gltf/aqua/model.gltf)" rotation="-90 0 0"
+                scale="3 3 3" position="1.9 1 6.3" animation-mixer pinch-scale>
             </a-entity>
         </a-marker>
     </a-scene>
