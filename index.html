@@ -8,22 +8,29 @@
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
     <script src="./build/player.js"></script>
+    <script scr="./build/vid.js"></script>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
+
 </head>
 
-
+<a-assets>
+    <video id="myvideo" src="./videos/test.mp4" preload="auto" repeat="none"></video>
+</a-assets>
 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded vr-mode-ui="enabled: false"
         arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled:false;">
+
+
+
 
         <a-camera static />
         <!--    <button id="play-button">Play</button>  -->
         <a-marker type="pattern" url="./images/pattern-test.patt">
 
 
-            <a-video src="./videos/test.mp4" width="4" height="3" rotation="-90 0 0" position="0 0 0" playsinline
+            <a-video src="#myvideo" width="4" height="3" rotation="-90 0 0" position="0 0 0" playsinline
                 webkit-playsinline play-on-window-click>
             </a-video>
             </a-entity>
