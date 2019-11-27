@@ -1,3 +1,4 @@
+// ini untuk tombol nya
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '﹖';
@@ -6,6 +7,8 @@ window.onload = () => {
     renderPlaces(places);
 };
 
+
+// fungsi untuk tentukan kordinat tempat tempat
 function staticLoadPlaces() {
     return [{
         name: 'Pokèmon',
@@ -16,20 +19,22 @@ function staticLoadPlaces() {
     }, ];
 }
 
+
+// deklarasikan model nya
 var models = [{
-        url: './assets/magnemite/scene.gltf',
+        url: './assets/ghost/scene.gltf',
         scale: '0.5 0.5 0.5',
         info: 'Magnemite, Lv. 5, HP 10/10',
         rotation: '0 180 0',
     },
     {
-        url: './assets/articuno/scene.gltf',
+        url: './assets/ghostie/scene.gltf',
         scale: '0.2 0.2 0.2',
         rotation: '0 180 0',
         info: 'Articuno, Lv. 80, HP 100/100',
     },
     {
-        url: './assets/dragonite/scene.gltf',
+        url: './assets/conwing/scene.gltf',
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
@@ -53,22 +58,32 @@ var setModel = function (model, entity) {
     entity.setAttribute('gltf-model', model.url);
 
     const div = document.querySelector('.instructions');
-    div.innerText = model.info;
+   // div.innerText = model.info;
 };
 
-function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
 
-    places.forEach((place) => {
+// fungsi untuk load tempat
+function renderPlaces(places) {
+    let scene = document.querySelector('a-scene'); // ascane nya
+
+    places.forEach((place) => { // looping load lokasi
         let latitude = place.location.lat;
         let longitude = place.location.lng;
 
-        let model = document.createElement('a-entity');
+        let model = document.createElement('a-entity'); // tampilkan di dalam a-entity
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
         setModel(models[modelIndex], model);
 
         model.setAttribute('animation-mixer', '');
+
+
+ // add place icon
+ //const icon = document.createElement('a-image');
+ //icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+ //icon.setAttribute('src', './assets/map-marker.png');
+ //icon.setAttribute('scale', '20, 20');
+
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
             var entity = document.querySelector('[gps-entity-place]');
