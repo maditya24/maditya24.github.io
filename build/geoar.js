@@ -75,7 +75,7 @@ function renderPlaces(places) {
 
         setModel(models[modelIndex], model);
 
-        model.setAttribute('animation-mixer', 'pinch-scale');
+        model.setAttribute('animation-mixer', '');
 
 
  // add place icon
